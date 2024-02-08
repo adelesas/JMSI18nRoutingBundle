@@ -36,7 +36,7 @@ use Symfony\Component\DependencyInjection\ContainerAware;
  */
 class RedirectController
 {
-    public function redirectAction(Request $request, $path, $host = null, $permanent = false, $scheme = null, $httpPort = 80, $httpsPort = 443)
+    public function redirectAction(Request $request, $path, $host = null, $permanent = false, $scheme = null, $httpPort = 80, $httpsPort = 443): RedirectResponse|Response
     {
         if (!$path) {
             return new Response(null, 410);
